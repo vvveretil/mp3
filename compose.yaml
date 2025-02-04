@@ -1,0 +1,18 @@
+services:
+  resourceserver:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: resourceserver
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+
+  songserver:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: songserver
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
